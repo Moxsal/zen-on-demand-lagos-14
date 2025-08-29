@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Pamper Me Spa Design System - Luxury Wellness Theme */
+
+@layer base {
+  :root {
+    /* Base colors - warm spa palette */
+    --background: 32 20% 98%;
+    --foreground: 25 15% 15%;
+
+    /* Card system */
+    --card: 0 0% 100%;
+    --card-foreground: 25 15% 20%;
+
+    /* Popover system */
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 15% 15%;
+
+    /* Spa primary - warm sage green */
+    --primary: 145 25% 35%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Spa secondary - warm cream */
+    --secondary: 32 25% 95%;
+    --secondary-foreground: 25 15% 25%;
+
+    /* Muted spa tones */
+    --muted: 32 15% 92%;
+    --muted-foreground: 25 10% 45%;
+
+    /* Spa accent - soft gold */
+    --accent: 45 35% 85%;
+    --accent-foreground: 25 20% 25%;
+
+    /* Luxury gold highlight */
+    --luxury: 45 50% 70%;
+    --luxury-foreground: 25 25% 15%;
+
+    /* Sage green variants */
+    --sage: 145 20% 70%;
+    --sage-foreground: 145 25% 25%;
+
+    /* Spa earth tones */
+    --earth: 25 20% 80%;
+    --earth-foreground: 25 25% 20%;
+
+    /* Error states */
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders and inputs */
+    --border: 32 20% 88%;
+    --input: 32 15% 90%;
+    --ring: 145 25% 35%;
+
+    /* Radius for spa aesthetic */
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-spa: linear-gradient(135deg, hsl(var(--background)), hsl(var(--secondary)));
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--luxury)), hsl(var(--accent)));
+    --gradient-sage: linear-gradient(135deg, hsl(var(--sage)), hsl(var(--primary)));
+    --gradient-hero: linear-gradient(135deg, hsl(32 30% 95%), hsl(145 20% 92%));
+
+    /* Shadows for depth */
+    --shadow-spa: 0 10px 30px -5px hsl(var(--primary) / 0.1);
+    --shadow-luxury: 0 20px 40px -10px hsl(var(--luxury) / 0.2);
+    --shadow-card: 0 4px 20px -2px hsl(var(--foreground) / 0.08);
+
+    /* Transitions */
+    --transition-spa: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  /* Spa utility classes */
+  .gradient-spa {
+    background: var(--gradient-spa);
+  }
+  
+  .gradient-luxury {
+    background: var(--gradient-luxury);
+  }
+  
+  .gradient-sage {
+    background: var(--gradient-sage);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-spa {
+    box-shadow: var(--shadow-spa);
+  }
+  
+  .shadow-luxury {
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .transition-spa {
+    transition: var(--transition-spa);
+  }
+
+  /* Spa animations */
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}
