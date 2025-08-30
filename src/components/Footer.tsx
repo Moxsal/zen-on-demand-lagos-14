@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Instagram, Facebook, Heart } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Facebook, Heart, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   const scrollToSection = (href: string) => {
@@ -34,7 +34,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <h3 className="text-2xl font-playfair font-semibold">
-              Pamper Me
+              Pamper Me Luxury Massage Spa
             </h3>
             <p className="text-background/80 leading-relaxed">
               Licensed massage therapists delivering professional wellness and therapeutic massage services across Lagos. Your health and relaxation are our priority.
@@ -102,7 +102,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-luxury" />
-                <span className="text-background/80 text-sm">+234 800 000 0000</span>
+                <span className="text-background/80 text-sm">901 661 6251</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-luxury" />
@@ -110,13 +110,24 @@ const Footer = () => {
               </div>
             </div>
             
-            <Button 
-              size="sm"
-              onClick={() => window.open("https://wa.me/2348000000000", "_blank")}
-              className="bg-luxury hover:bg-luxury/90 text-luxury-foreground mt-4"
-            >
-              WhatsApp Us
-            </Button>
+            <div className="flex flex-col space-y-2 mt-4">
+              <Button 
+                size="sm"
+                onClick={() => window.open("tel:+19016616251", "_self")}
+                className="bg-luxury hover:bg-luxury/90 text-luxury-foreground"
+              >
+                <Phone className="w-4 h-4 mr-2" />
+                Call Us
+              </Button>
+              <Button 
+                size="sm"
+                onClick={() => window.open("https://wa.me/19016616251", "_blank")}
+                className="bg-luxury hover:bg-luxury/90 text-luxury-foreground"
+              >
+                <MessageCircle className="w-4 h-4 mr-2" />
+                WhatsApp Us
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -142,7 +153,7 @@ const Footer = () => {
         <div className="border-t border-background/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-background/60 text-sm">
-              © 2024 Pamper Me Mobile + In-Spa Massage Services. All rights reserved. | Licensed Wellness Provider
+              © 2024 Pamper Me Luxury Massage Spa. All rights reserved. | Licensed Wellness Provider
             </div>
             <div className="flex items-center space-x-4 text-sm">
               <button 

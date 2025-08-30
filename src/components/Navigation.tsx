@@ -25,7 +25,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="font-playfair text-2xl font-semibold text-primary">
-            Pamper Me
+            Pamper Me Luxury Massage Spa
           </div>
 
           {/* Desktop Navigation */}
@@ -46,10 +46,10 @@ const Navigation = () => {
             <Button 
               variant="outline" 
               size="sm"
-              onClick={() => window.open("tel:+2348000000000", "_self")}
+              onClick={() => window.open("tel:+19016616251", "_self")}
             >
               <Phone className="w-4 h-4 mr-2" />
-              Call
+              Call Us
             </Button>
             <Button 
               variant="default" 
@@ -86,10 +86,10 @@ const Navigation = () => {
                 <Button 
                   variant="outline" 
                   size="sm"
-                  onClick={() => window.open("tel:+2348000000000", "_self")}
+                  onClick={() => window.open("tel:+19016616251", "_self")}
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Call Now
+                  Call Us
                 </Button>
                 <Button 
                   variant="default" 

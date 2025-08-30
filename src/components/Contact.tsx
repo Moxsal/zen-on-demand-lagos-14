@@ -7,8 +7,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone & WhatsApp",
-      details: ["+234 800 000 0000"],
-      action: () => window.open("tel:+2348000000000", "_self"),
+      details: ["901 661 6251"],
+      action: () => window.open("tel:+19016616251", "_self"),
       actionText: "Call Now"
     },
     {
@@ -128,7 +128,7 @@ const Contact = () => {
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button 
                     className="flex-1 bg-background hover:bg-background/90 text-foreground shadow-spa"
-                    onClick={() => window.open("https://wa.me/2348000000000", "_blank")}
+                    onClick={() => window.open("https://wa.me/19016616251", "_blank")}
                   >
                     <MessageCircle className="w-4 h-4 mr-2" />
                     WhatsApp
