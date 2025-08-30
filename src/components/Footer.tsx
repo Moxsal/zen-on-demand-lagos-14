@@ -17,12 +17,14 @@ const Footer = () => {
   ];
 
   const services = [
-    "Swedish Massage",
-    "Deep Tissue Massage", 
-    "Couples Massage",
+    "Swedish Massage Therapy",
+    "Deep Tissue & Pain Relief", 
+    "Prenatal Massage Care",
     "Hot Stone Therapy",
-    "Aromatherapy Massage",
-    "Facial & Skincare"
+    "Aromatherapy Wellness",
+    "Reflexology & Foot Care",
+    "Facials & Skincare",
+    "Couples & Group Sessions"
   ];
 
   return (
@@ -35,7 +37,7 @@ const Footer = () => {
               Pamper Me
             </h3>
             <p className="text-background/80 leading-relaxed">
-              Luxury mobile spa and in-hotel massage services delivering premium wellness experiences across Lagos.
+              Licensed massage therapists delivering professional wellness and therapeutic massage services across Lagos. Your health and relaxation are our priority.
             </p>
             <div className="flex space-x-3">
               <Button 
@@ -118,11 +120,29 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Professional Credentials */}
+        <div className="border-t border-background/20 pt-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="space-y-2">
+              <h5 className="text-luxury font-semibold">Licensed Professionals</h5>
+              <p className="text-background/70 text-sm">Certified massage therapists with years of experience</p>
+            </div>
+            <div className="space-y-2">
+              <h5 className="text-luxury font-semibold">Safe & Hygienic</h5>
+              <p className="text-background/70 text-sm">Strict sanitization protocols for your safety</p>
+            </div>
+            <div className="space-y-2">
+              <h5 className="text-luxury font-semibold">Satisfaction Guaranteed</h5>
+              <p className="text-background/70 text-sm">100% satisfaction or money-back guarantee</p>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Section */}
         <div className="border-t border-background/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-background/60 text-sm">
-              © 2024 Pamper Me Mobile + In-Spa Massage Services. All rights reserved.
+              © 2024 Pamper Me Mobile + In-Spa Massage Services. All rights reserved. | Licensed Wellness Provider
             </div>
             <div className="flex items-center space-x-4 text-sm">
               <button 
@@ -138,12 +158,19 @@ const Footer = () => {
               >
                 Terms of Service
               </button>
+              <span className="text-background/40">•</span>
+              <button 
+                className="text-background/60 hover:text-luxury transition-spa"
+                onClick={() => scrollToSection("#contact")}
+              >
+                Health Disclaimer
+              </button>
             </div>
           </div>
           
           <div className="text-center mt-6 pt-6 border-t border-background/20">
             <p className="text-background/60 text-sm flex items-center justify-center">
-              Made with <Heart className="w-4 h-4 mx-1 text-luxury" /> for wellness in Lagos
+              Promoting wellness and therapeutic healing <Heart className="w-4 h-4 mx-1 text-luxury" /> in Lagos
             </p>
           </div>
         </div>

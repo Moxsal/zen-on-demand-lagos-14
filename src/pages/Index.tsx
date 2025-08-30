@@ -6,6 +6,7 @@ import Gallery from "@/components/Gallery";
 import BookingForm from "@/components/BookingForm";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import TrustBadges from "@/components/TrustBadges";
 import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
@@ -13,6 +14,7 @@ const Index = () => {
     <main className="min-h-screen bg-background">
       <Navigation />
       <Hero />
+      <TrustBadges />
       <Services />
       <About />
       <Gallery />

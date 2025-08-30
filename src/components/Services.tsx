@@ -1,56 +1,72 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Clock, Star, Users, Heart } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Heart, Brain, Zap, Shield, Baby, Footprints, Sparkles, HandHeart, Users2 } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       title: "Swedish Massage",
-      description: "Gentle, relaxing full-body massage to reduce stress and improve circulation",
-      duration: "60-90 minutes",
-      price: "From ₦25,000",
+      description: "Gentle, relaxing full-body massage using smooth, flowing strokes to promote deep relaxation and overall wellness",
+      benefits: ["Stress relief", "Improved sleep", "Mood boost", "Immune support"],
       popular: true,
       icon: Heart,
     },
     {
       title: "Deep Tissue Massage",
-      description: "Therapeutic massage targeting muscle tension and chronic pain relief",
-      duration: "60-90 minutes", 
-      price: "From ₦30,000",
+      description: "Therapeutic massage targeting deeper muscle layers to address chronic tension and promote healing",
+      benefits: ["Pain relief", "Recovery support", "Improved mobility", "Reduced muscle tension"],
       popular: false,
-      icon: Star,
+      icon: Zap,
     },
     {
-      title: "Couples Massage",
-      description: "Romantic spa experience for two with synchronized massage therapy",
-      duration: "60-90 minutes",
-      price: "From ₦45,000",
-      popular: true,
-      icon: Users,
-    },
-    {
-      title: "Hot Stone Therapy",
-      description: "Heated stone massage for deep relaxation and muscle tension relief",
-      duration: "75-90 minutes",
-      price: "From ₦35,000",
+      title: "Hot Stone Massage",
+      description: "Heated volcanic stones combined with massage therapy for ultimate relaxation and muscle relief",
+      benefits: ["Deep relaxation", "Better circulation", "Reduced anxiety", "Eased stiffness"],
       popular: false,
-      icon: Heart,
+      icon: Shield,
     },
     {
       title: "Aromatherapy Massage",
-      description: "Essential oil massage combining therapeutic benefits with relaxation",
-      duration: "60-75 minutes",
-      price: "From ₦28,000",
+      description: "Essential oil-infused massage therapy that harmonizes mind, body, and spirit for holistic wellness",
+      benefits: ["Emotional balance", "Stress reduction", "Energy boost", "Improved breathing"],
       popular: false,
-      icon: Heart,
+      icon: Brain,
     },
     {
-      title: "Facial & Skincare",
-      description: "Professional facial treatments for healthy, glowing skin",
-      duration: "45-60 minutes",
-      price: "From ₦20,000",
+      title: "Prenatal Massage",
+      description: "Specialized gentle massage designed specifically for expecting mothers' comfort and wellness",
+      benefits: ["Back pain relief", "Reduced swelling", "Better circulation", "Improved sleep"],
       popular: true,
-      icon: Star,
+      icon: Baby,
+    },
+    {
+      title: "Reflexology (Foot Massage)",
+      description: "Therapeutic foot massage focusing on pressure points to promote whole-body wellness and balance",
+      benefits: ["Energy flow balance", "Nervous system support", "Digestion aid", "Stress relief"],
+      popular: false,
+      icon: Footprints,
+    },
+    {
+      title: "Facials & Skin Care Treatments",
+      description: "Professional facial treatments using premium products for radiant, healthy-looking skin",
+      benefits: ["Hydration", "Anti-aging", "Improved tone", "Refreshed skin"],
+      popular: true,
+      icon: Sparkles,
+    },
+    {
+      title: "Manicure & Pedicure Spa Treatments",
+      description: "Complete hand and foot care treatments combining beauty and therapeutic wellness benefits",
+      benefits: ["Circulation boost", "Tension relief", "Improved appearance", "Relaxation"],
+      popular: false,
+      icon: HandHeart,
+    },
+    {
+      title: "Couples & Group Packages",
+      description: "Shared wellness experiences designed for couples, friends, or family bonding and relaxation",
+      benefits: ["Bonding", "Shared relaxation", "Memorable experience", "Group wellness"],
+      popular: true,
+      icon: Users2,
     },
   ];
 
@@ -77,66 +93,99 @@ const Services = () => {
             return (
               <Card 
                 key={index} 
-                className="relative group hover:shadow-luxury transition-spa cursor-pointer border-border/50 bg-card/80 backdrop-blur-sm"
+                className="relative group hover:shadow-luxury transition-spa border-border/50 bg-card/80 backdrop-blur-sm overflow-hidden"
               >
                 {service.popular && (
-                  <div className="absolute -top-3 left-4 bg-luxury text-luxury-foreground px-3 py-1 rounded-full text-sm font-medium">
-                    Popular
+                  <div className="absolute -top-3 left-4 bg-gradient-luxury text-luxury-foreground px-3 py-1 rounded-full text-sm font-medium shadow-spa z-10">
+                    Most Popular
                   </div>
                 )}
                 
                 <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <IconComponent className="w-8 h-8 text-primary" />
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {service.duration}
+                  <div className="flex items-center mb-4">
+                    <div className="p-3 rounded-2xl bg-primary/10 mr-4">
+                      <IconComponent className="w-8 h-8 text-primary" />
                     </div>
+                    <CardTitle className="text-xl font-playfair text-foreground group-hover:text-primary transition-spa">
+                      {service.title}
+                    </CardTitle>
                   </div>
-                  <CardTitle className="text-xl font-playfair text-foreground group-hover:text-primary transition-spa">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-muted-foreground leading-relaxed">
+                  <CardDescription className="text-muted-foreground leading-relaxed mb-4">
                     {service.description}
                   </CardDescription>
+                  
+                  <div className="space-y-2">
+                    <h4 className="text-sm font-semibold text-foreground">Health Benefits:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <Badge 
+                          key={benefitIndex}
+                          variant="secondary" 
+                          className="text-xs bg-sage/20 text-sage-foreground border-sage/30 hover:bg-sage/30 transition-spa"
+                        >
+                          {benefit}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
                 </CardHeader>
                 
                 <CardContent className="pt-0">
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg font-semibold text-primary">
-                      {service.price}
-                    </span>
-                    <Button 
-                      variant="outline" 
-                      size="sm"
-                      onClick={scrollToBooking}
-                      className="hover:bg-primary hover:text-primary-foreground transition-spa"
-                    >
-                      Book Now
-                    </Button>
-                  </div>
+                  <Button 
+                    onClick={scrollToBooking}
+                    className="w-full bg-gradient-sage hover:opacity-90 transition-spa shadow-spa"
+                  >
+                    Book This Service
+                  </Button>
                 </CardContent>
               </Card>
             );
           })}
         </div>
 
-        {/* Package Deals */}
-        <div className="mt-16 bg-gradient-luxury rounded-2xl p-8 text-center shadow-luxury">
-          <h3 className="text-2xl font-playfair font-semibold text-luxury-foreground mb-4">
-            Special Packages Available
-          </h3>
-          <p className="text-luxury-foreground/80 mb-6 max-w-2xl mx-auto">
-            Save up to 20% with our wellness packages. Perfect for regular self-care or special occasions.
-          </p>
-          <Button 
-            variant="outline" 
-            size="lg"
-            onClick={scrollToBooking}
-            className="bg-background hover:bg-background/90 text-foreground border-0 shadow-spa"
-          >
-            View Packages
-          </Button>
+        {/* Wellness Commitment & Certifications */}
+        <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="bg-gradient-luxury rounded-2xl p-8 text-center shadow-luxury">
+            <h3 className="text-2xl font-playfair font-semibold text-luxury-foreground mb-4">
+              Custom Wellness Packages
+            </h3>
+            <p className="text-luxury-foreground/80 mb-6">
+              Personalized treatment combinations designed for your specific wellness goals and health needs.
+            </p>
+            <Button 
+              onClick={scrollToBooking}
+              className="bg-background hover:bg-background/90 text-foreground border-0 shadow-spa"
+            >
+              Create My Package
+            </Button>
+          </div>
+          
+          <div className="bg-sage/10 border border-sage/20 rounded-2xl p-8 text-center">
+            <h3 className="text-2xl font-playfair font-semibold text-foreground mb-4">
+              Professional Standards
+            </h3>
+            <div className="space-y-3 text-muted-foreground">
+              <p className="flex items-center justify-center gap-2">
+                <Shield className="w-5 h-5 text-primary" />
+                Licensed & Certified Therapists
+              </p>
+              <p className="flex items-center justify-center gap-2">
+                <Sparkles className="w-5 h-5 text-primary" />
+                Premium Equipment & Products
+              </p>
+              <p className="flex items-center justify-center gap-2">
+                <Heart className="w-5 h-5 text-primary" />
+                Strict Hygiene Protocols
+              </p>
+            </div>
+            <Button 
+              variant="outline"
+              onClick={scrollToBooking}
+              className="mt-4 border-sage/30 hover:bg-sage/20 transition-spa"
+            >
+              Learn More
+            </Button>
+          </div>
         </div>
       </div>
     </section>
