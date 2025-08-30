@@ -64,7 +64,7 @@ Additional Notes: ${formData.message}
 
 Please confirm availability. Thank you!`;
 
-    const whatsappUrl = `https://wa.me/2348000000000?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/19016616251?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
 
     toast({
@@ -103,15 +103,15 @@ Please confirm availability. Thank you!`;
                 <Button 
                   variant="outline" 
                   className="w-full justify-start"
-                  onClick={() => window.open("tel:+2348000000000", "_self")}
+                  onClick={() => window.open("tel:+19016616251", "_self")}
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Call: +234 800 000 0000
+                  Call: 901 661 6251
                 </Button>
                 <Button 
                   variant="outline" 
                   className="w-full justify-start"
-                  onClick={() => window.open("https://wa.me/2348000000000", "_blank")}
+                  onClick={() => window.open("https://wa.me/19016616251", "_blank")}
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
                   WhatsApp
