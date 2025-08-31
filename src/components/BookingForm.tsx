@@ -111,10 +111,26 @@ Please confirm availability. Thank you!`;
                 <Button 
                   variant="outline" 
                   className="w-full justify-start"
+                  onClick={() => window.open("tel:+2349016616251", "_self")}
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call: +234901 661 6251
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="w-full justify-start"
                   onClick={() => window.open("https://wa.me/2348025488808", "_blank")}
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
-                  WhatsApp
+                  WhatsApp: +234 802 548 8808
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="w-full justify-start"
+                  onClick={() => window.open("https://wa.me/2349016616251", "_blank")}
+                >
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  WhatsApp: +234901 661 6251
                 </Button>
                 <Button 
                   variant="outline" 

@@ -102,7 +102,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-luxury" />
-                <span className="text-background/80 text-sm">901 661 6251</span>
+                <span className="text-background/80 text-sm">+234901 661 6251</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-luxury" />
@@ -118,7 +118,7 @@ const Footer = () => {
             <div className="flex flex-col space-y-2 mt-4">
               <Button 
                 size="sm"
-                onClick={() => window.open("tel:+19016616251", "_self")}
+                onClick={() => window.open("tel:+2349016616251", "_self")}
                 className="bg-luxury hover:bg-luxury/90 text-luxury-foreground"
               >
                 <Phone className="w-4 h-4 mr-2" />
@@ -126,7 +126,7 @@ const Footer = () => {
               </Button>
               <Button 
                 size="sm"
-                onClick={() => window.open("https://wa.me/19016616251", "_blank")}
+                onClick={() => window.open("https://wa.me/2349016616251", "_blank")}
                 className="bg-luxury hover:bg-luxury/90 text-luxury-foreground"
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
