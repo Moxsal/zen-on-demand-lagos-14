@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Calendar, Clock, MapPin, Phone, MessageCircle } from "lucide-react";
+import { Calendar, Clock, MapPin, Phone, MessageCircle, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const BookingForm = () => {
@@ -64,7 +64,7 @@ Additional Notes: ${formData.message}
 
 Please confirm availability. Thank you!`;
 
-    const whatsappUrl = `https://wa.me/19016616251?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/2348025488808?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
 
     toast({
@@ -103,18 +103,26 @@ Please confirm availability. Thank you!`;
                 <Button 
                   variant="outline" 
                   className="w-full justify-start"
-                  onClick={() => window.open("tel:+19016616251", "_self")}
+                  onClick={() => window.open("tel:+2348025488808", "_self")}
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Call: 901 661 6251
+                  Call: +234 802 548 8808
                 </Button>
                 <Button 
                   variant="outline" 
                   className="w-full justify-start"
-                  onClick={() => window.open("https://wa.me/19016616251", "_blank")}
+                  onClick={() => window.open("https://wa.me/2348025488808", "_blank")}
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
                   WhatsApp
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="w-full justify-start"
+                  onClick={() => window.open("mailto:modelshub306@gmail.com", "_self")}
+                >
+                  <Mail className="w-4 h-4 mr-2" />
+                  Send Email
                 </Button>
               </CardContent>
             </Card>
