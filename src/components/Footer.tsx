@@ -106,7 +106,12 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-luxury" />
-                <span className="text-background/80 text-sm">info@pamperme-lagos.com</span>
+                <button 
+                  onClick={() => window.open("mailto:modelshub306@gmail.com", "_self")}
+                  className="text-background/80 text-sm hover:text-luxury transition-spa"
+                >
+                  modelshub306@gmail.com
+                </button>
               </div>
             </div>
             

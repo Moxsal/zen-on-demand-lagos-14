@@ -14,8 +14,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: ["info@pamperme-lagos.com"],
-      action: () => window.open("mailto:info@pamperme-lagos.com", "_self"),
+      details: ["modelshub306@gmail.com"],
+      action: () => window.open("mailto:modelshub306@gmail.com", "_self"),
       actionText: "Send Email"
     },
     {
