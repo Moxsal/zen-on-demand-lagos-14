@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Instagram, Facebook, Heart, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Heart, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   const scrollToSection = (href: string) => {
@@ -39,24 +39,6 @@ const Footer = () => {
             <p className="text-background/80 leading-relaxed">
               Licensed massage therapists delivering professional wellness and therapeutic massage services across Lagos. Your health and relaxation are our priority.
             </p>
-            <div className="flex space-x-3">
-              <Button 
-                variant="ghost" 
-                size="sm"
-                onClick={() => window.open("https://instagram.com/pamperme_lagos", "_blank")}
-                className="text-background hover:text-luxury hover:bg-background/10"
-              >
-                <Instagram className="w-5 h-5" />
-              </Button>
-              <Button 
-                variant="ghost" 
-                size="sm"
-                onClick={() => window.open("https://facebook.com/pampermemobile", "_blank")}
-                className="text-background hover:text-luxury hover:bg-background/10"
-              >
-                <Facebook className="w-5 h-5" />
-              </Button>
-            </div>
           </div>
 
           {/* Quick Links */}

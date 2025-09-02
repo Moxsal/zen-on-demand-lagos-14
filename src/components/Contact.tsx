@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Clock, MessageCircle, Instagram, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
@@ -144,39 +144,6 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* Social Media */}
-            <Card className="shadow-card border-border/50">
-              <CardHeader>
-                <CardTitle className="text-lg font-playfair text-foreground text-center">
-                  Follow Our Journey
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <div className="flex justify-center space-x-4">
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    onClick={() => window.open("https://instagram.com/pamperme_lagos", "_blank")}
-                    className="hover:bg-primary hover:text-primary-foreground transition-spa"
-                  >
-                    <Instagram className="w-4 h-4 mr-2" />
-                    Instagram
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    onClick={() => window.open("https://facebook.com/pampermemobile", "_blank")}
-                    className="hover:bg-primary hover:text-primary-foreground transition-spa"
-                  >
-                    <Facebook className="w-4 h-4 mr-2" />
-                    Facebook
-                  </Button>
-                </div>
-                <p className="text-sm text-muted-foreground mt-3">
-                  See our latest work and client experiences
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
