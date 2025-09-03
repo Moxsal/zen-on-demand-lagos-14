@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle, Star } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
@@ -141,6 +141,26 @@ const Contact = () => {
                     Book Online
                   </Button>
                 </div>
+              </CardContent>
+            </Card>
+
+            {/* Google Business */}
+            <Card className="shadow-card border-border/50">
+              <CardContent className="p-6 text-center">
+                <h4 className="text-lg font-playfair font-semibold text-foreground mb-3">
+                  Find Us on Google
+                </h4>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Visit our Google Business page for reviews and directions
+                </p>
+                <Button 
+                  variant="outline" 
+                  className="hover:bg-primary hover:text-primary-foreground transition-spa"
+                  onClick={() => window.open("https://share.google/v8dxZEziHB4WqScmx", "_blank")}
+                >
+                  <Star className="w-4 h-4 mr-2" />
+                  Google Business
+                </Button>
               </CardContent>
             </Card>
 

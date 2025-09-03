@@ -5,9 +5,12 @@ import spaHeroImage from "@/assets/spa-hero.jpg";
 import mobileSpaImage from "@/assets/mobile-spa.jpg";
 import spaTreatmentImage from "@/assets/spa-treatment.jpg";
 import spaProductsImage from "@/assets/spa-products.jpg";
+import deepTissueBenefitsImage from "@/assets/deep-tissue-benefits.jpg";
+import hotStoneMassageImage from "@/assets/hot-stone-massage.jpg";
+import headMassageImage from "@/assets/head-massage.jpg";
 
 const Gallery = () => {
-  const galleryItems = [
+const galleryItems = [
     {
       image: spaHeroImage,
       title: "Luxury Spa Environment",
@@ -27,6 +30,21 @@ const Gallery = () => {
       image: spaProductsImage,
       title: "Premium Spa Products",
       description: "High-quality oils and wellness accessories"
+    },
+    {
+      image: deepTissueBenefitsImage,
+      title: "Deep Tissue Massage Benefits",
+      description: "Therapeutic benefits including pain relief and improved mobility"
+    },
+    {
+      image: hotStoneMassageImage,
+      title: "Hot Stone Therapy",
+      description: "Relaxing hot stone massage for deep muscle relief"
+    },
+    {
+      image: headMassageImage,
+      title: "Head & Facial Massage",
+      description: "Soothing head and facial treatments for complete relaxation"
     }
   ];
 
