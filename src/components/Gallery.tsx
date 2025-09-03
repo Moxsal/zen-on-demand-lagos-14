@@ -139,18 +139,6 @@ const galleryItems = [
           ))}
         </div>
 
-        {/* Instagram CTA */}
-        <div className="text-center mt-16">
-          <Button 
-            variant="outline" 
-            size="lg"
-            onClick={() => window.open("https://instagram.com/pamperme_lagos", "_blank")}
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-spa"
-          >
-            <ExternalLink className="w-5 h-5 mr-2" />
-            View More on Instagram
-          </Button>
-        </div>
       </div>
     </section>
   );

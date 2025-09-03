@@ -26,7 +26,7 @@ const Contact = () => {
         "Adebisi Omotola Street",
         "Iru, Victoria Island, Lagos"
       ],
-      action: () => window.open("https://maps.google.com/?q=Maison+55+Hotel+Victoria+Island+Lagos", "_blank"),
+      action: () => window.open("https://www.google.com/search?sca_esv=62890ff6c1b2e448&hl=en&authuser=0&sxsrf=AE3TifNoPybIEbi6Xu06UZsvOUUPFrYPhw%3A1750441989024&kgmid=%2Fg%2F11w4vbmm9d&q=Pamper%20Me%20Mobile%20%2B%20IN%20spa%20Massage%20Services&shndl=30&shem=lstuoe2&source=sh%2Fx%2Floc%2Fact%2Fm4%2F2#wptab=LocalPoiPhotos&lpg=cid:CgIgARICEAE%3D&pgsivoi=1&ebo=0", "_blank"),
       actionText: "View Map"
     },
     {
